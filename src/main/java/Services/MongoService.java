@@ -30,7 +30,7 @@ public class MongoService {
 
 	public void closeMongoSession() {
 		mongoclient.close();
-		System.out.println("session ended");
+		System.out.println("session ended 2");
 	}
 
 }
