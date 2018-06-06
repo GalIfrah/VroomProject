@@ -32,6 +32,7 @@ public class HomePageTests extends Basic {
 		Assert.assertEquals("Volvo",
 
 				webDriver.getElementBy(Locators.XPATH, "//a[@class = 'active-filters-section']").getText());
+		webDriver.close();
 
 	}
 
@@ -46,6 +47,8 @@ public class HomePageTests extends Basic {
 		vroomHomePage.clickOnBuyButton();
 
 		BuyPage.sortByHighestPrice();
+		webDriver.close();
+
 
 	}
 
@@ -68,7 +71,7 @@ public class HomePageTests extends Basic {
 				fortuneText);
 
 		System.out.println(fortuneText);
-
+webDriver.close();
 	}
 
 	@Test
