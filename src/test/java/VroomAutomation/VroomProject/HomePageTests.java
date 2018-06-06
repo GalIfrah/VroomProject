@@ -1,4 +1,5 @@
 package VroomAutomation.VroomProject;
+
 import org.junit.Assert;
 
 import org.junit.Ignore;
@@ -49,7 +50,6 @@ public class HomePageTests extends Basic {
 		BuyPage.sortByHighestPrice();
 		webDriver.close();
 
-
 	}
 
 	@Ignore
@@ -71,7 +71,7 @@ public class HomePageTests extends Basic {
 				fortuneText);
 
 		System.out.println(fortuneText);
-webDriver.close();
+		webDriver.close();
 	}
 
 	@Test
