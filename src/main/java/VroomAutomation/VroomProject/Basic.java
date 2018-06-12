@@ -32,8 +32,11 @@ public class Basic {
 			TestParams params = description.getAnnotation(TestParams.class);
 
 			if (params != null) {
-				System.out.println(params.testDescription());
-				System.out.println(params.testTimeout());
+
+				System.out.println("test params are: " + params.testDescription() + " and " + params.testTimeout());
+
+				// System.out.println(params.testDescription());
+				// System.out.println(params.testTimeout());
 
 			}
 
@@ -42,12 +45,7 @@ public class Basic {
 		}
 	};
 
-//	@BeforeClass
-//	public static void beforeSetup() throws IOException {
-//		mServices = new MongoServices();
-//		mServices.startMongoServer();
-//		mServices.StartConnectionToLocalHost();
-// }
+	// run before each test
 
 	@Before
 	public void setup() throws IOException {
@@ -56,6 +54,8 @@ public class Basic {
 		webDriver.init("http://localhost:4444/wd/hub");
 		GenericPageObject.setWebDriver(webDriver);
 	}
+
+	// run after each test
 
 	@After
 	public void tearDown() {
